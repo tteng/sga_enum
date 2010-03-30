@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/sga_enum.rb",
+     "sga_enum.gemspec",
      "test/helper.rb",
      "test/test_sga_enum.rb"
   ]
