@@ -1,6 +1,28 @@
-= sga_enum
+= active_enum
+== Installation
 
-Description goes here.
+gem install active_enum
+
+== Usage 
+
+class User < AR
+
+  module Gender
+    MALE = 0
+    FEMALE = 1
+  end
+
+  enum_attr :gender, [['Male',Gender::MALE], ['Female',Gender::FEMALE]], :allow_blank => true
+
+end
+
+build select drop down:
+
+  <%= f.select :gender, User::ENUMS_GENDER %>
+
+get the instance gender:
+
+  <%= user.gender_name %>
 
 == Note on Patches/Pull Requests
  
